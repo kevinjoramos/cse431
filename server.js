@@ -1,7 +1,8 @@
 const express = require('express')
+const router = require("./routes");
 const app = express()
 const port = 8080
-const router = require("routes/router")
+
 
 app.use('/', router)
 
