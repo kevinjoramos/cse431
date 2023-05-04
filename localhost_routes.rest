@@ -62,3 +62,43 @@ Content-Type: application/json
 }
 
 
+######## update a previous contact favorite color pink
+
+PUT http://localhost:8080/contacts/644ac1f44b77ce94aed02004
+Content-Type: application/json
+
+{
+  "_id": "644ac1f44b77ce94aed02004",
+  "firstName": "Ivery",
+  "lastName": "Ramos",
+  "email": "ivybooboo@cutemail.com",
+  "favoriteColor": "pink",
+  "birthday": "February 28, 2023"
+}
+
+### update a previous contact favorite color orange
+
+PUT http://localhost:8080/contacts/644ac1f44b77ce94aed02004
+Content-Type: application/json
+
+{
+"_id": "644ac1f44b77ce94aed02004",
+"firstName": "Ivery",
+"lastName": "Ramos",
+"email": "ivybooboo@cutemail.com",
+"favoriteColor": "orange",
+"birthday": "February 28, 2023"
+}
+
+
+######## delete previous contacts.
+
+DELETE http://localhost:8080/contacts/644ac1f44b77ce94aed02004
+
+###
+
+DELETE http://localhost:8080/contacts/644ac1f44b77ce94aed02008
+
+###
+
+DELETE http://localhost:8080/contacts/644ac1f44b77ce94aed02009

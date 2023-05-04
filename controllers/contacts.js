@@ -61,11 +61,43 @@ const createNewContact = async (request, response) => {
 }
 
 const updateContact = async (request, response) => {
-    console.log(request)
+    try {
+        const database = mongoClient.db("cse341")
+        const contacts = database.collection("contacts")
+        const contactId = new ObjectId(request.params["id"])
+
+        contacts.replaceOne(
+            { _id: contactId },
+            {
+                _id: new ObjectId(request.body._id),
+                firstName: request.body.firstName,
+                lastName: request.body.lastName,
+                email: request.body.email,
+                favoriteColor: request.body.favoriteColor,
+                birthday: request.body.birthday
+            }
+        )
+        console.log(request.body)
+
+        response.sendStatus(204)
+    } catch (e) {
+        console.log(e)
+    }
 }
 
 const deleteContact = async (request, response) => {
-    console.log(request)
+    try {
+        const database = mongoClient.db("cse341")
+        const contacts = database.collection("contacts")
+        const contactId = new ObjectId(request.params["id"])
+
+        contacts.deleteOne( { _id: contactId } )
+        console.log(`requested delete for: ${contactId}`)
+
+        response.sendStatus(200)
+    } catch (e) {
+        console.log(e)
+    }
 }
 
 
