@@ -19,5 +19,87 @@ GET https://cse341-b0h6.onrender.com/contacts/644ac1564b77ce94aed02003
 
 GET https://cse341-b0h6.onrender.com/contacts/644ac1f44b77ce94aed02005
 
+
+######## create a new contact
+
+POST https://cse341-b0h6.onrender.com/contacts
+Content-Type: application/json
+
+{
+  "_id": "644ac1f44b77ce94aed02004",
+  "firstName": "Ivery",
+  "lastName": "Ramos",
+  "email": "ivybooboo@cutemail.com",
+  "favoriteColor": "orange",
+  "birthday": "February 28, 2023"
+}
+
 ###
 
+POST https://cse341-b0h6.onrender.com/contacts
+Content-Type: application/json
+
+{
+  "_id": "644ac1f44b77ce94aed02008",
+  "firstName": "Scarlet",
+  "lastName": "Ramos",
+  "email": "scar@gmail.com",
+  "favoriteColor": "scarlet",
+  "birthday": "September 15, 2003"
+}
+
+###
+
+POST https://cse341-b0h6.onrender.com/contacts
+Content-Type: application/json
+
+{
+  "_id": "644ac1f44b77ce94aed02009",
+  "firstName": "Raquel",
+  "lastName": "Ramos",
+  "email": "raquelsita@gmail.com",
+  "favoriteColor": "purple",
+  "birthday": "September 15, 2003"
+}
+
+
+######## update a previous contact favorite color pink
+
+PUT https://cse341-b0h6.onrender.com/contacts/644ac1f44b77ce94aed02004
+Content-Type: application/json
+
+{
+  "_id": "644ac1f44b77ce94aed02004",
+  "firstName": "Ivery",
+  "lastName": "Ramos",
+  "email": "ivybooboo@cutemail.com",
+  "favoriteColor": "pink",
+  "birthday": "February 28, 2023"
+}
+
+### update a previous contact favorite color orange
+
+PUT https://cse341-b0h6.onrender.com/contacts/644ac1f44b77ce94aed02004
+Content-Type: application/json
+
+{
+  "_id": "644ac1f44b77ce94aed02004",
+  "firstName": "Ivery",
+  "lastName": "Ramos",
+  "email": "ivybooboo@cutemail.com",
+  "favoriteColor": "orange",
+  "birthday": "February 28, 2023"
+}
+
+
+######## delete previous contacts.
+
+DELETE https://cse341-b0h6.onrender.com/contacts/644ac1f44b77ce94aed02004
+
+###
+
+DELETE https://cse341-b0h6.onrender.com/contacts/644ac1f44b77ce94aed02008
+
+###
+
+DELETE https://cse341-b0h6.onrender.com/contacts/644ac1f44b77ce94aed02009
