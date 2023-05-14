@@ -17,6 +17,7 @@ const listAllContacts = async (request, response) => {
         response.json(contactListResults)
     } catch(e) {
         console.log(e)
+        response.sendStatus(400)
     }
 }
 
@@ -33,6 +34,7 @@ const listOneContact = async (request, response) => {
         response.json(contactResult)
     } catch(e) {
         console.log(e)
+        response.sendStatus(400)
     }
 }
 
@@ -57,6 +59,7 @@ const createNewContact = async (request, response) => {
 
     } catch(e) {
         console.log(e)
+        response.sendStatus(400)
     }
 }
 
@@ -82,6 +85,7 @@ const updateContact = async (request, response) => {
         response.sendStatus(204)
     } catch (e) {
         console.log(e)
+        response.sendStatus(400)
     }
 }
 
@@ -97,6 +101,7 @@ const deleteContact = async (request, response) => {
         response.sendStatus(200)
     } catch (e) {
         console.log(e)
+        response.sendStatus(400)
     }
 }
 
